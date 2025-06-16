@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>First number: {{n1}}</h1>
+    <h1>Second number: {{n2}}</h1>
+    <div>
+        <a href="{{url_for("add",num1=n1,num2=n2)}}">Addition</a>
+        <a href="{{url_for("sub",num1=n1,num2=n2)}}">Substraction</a>
+        <a href="{{url_for("mul",num1=n1,num2=n2)}}">Multiplication</a>
+        <a href="{{url_for("div",num1=n1,num2=n2)}}">Division</a>
+    </div>
+</body>
+</html>
