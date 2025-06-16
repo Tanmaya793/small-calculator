@@ -3,16 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Number Operations</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        h1 {
+            margin: 10px 0;
+            color: #333;
+        }
+
+        .buttons {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .buttons a {
+            text-decoration: none;
+            background-color: #007bff;
+            color: white;
+            padding: 12px 20px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: background-color 0.3s;
+        }
+
+        .buttons a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 <body>
-    <h1>First number: {{n1}}</h1>
-    <h1>Second number: {{n2}}</h1>
-    <div>
-        <a href="{{url_for("add",num1=n1,num2=n2)}}">Addition</a>
-        <a href="{{url_for("sub",num1=n1,num2=n2)}}">Substraction</a>
-        <a href="{{url_for("mul",num1=n1,num2=n2)}}">Multiplication</a>
-        <a href="{{url_for("div",num1=n1,num2=n2)}}">Division2</a>
+    <div class="container">
+        <h1>First Number: {{n1}}</h1>
+        <h1>Second Number: {{n2}}</h1>
+        <div class="buttons">
+            <a href="{{ url_for('add', num1=n1, num2=n2) }}">Addition</a>
+            <a href="{{ url_for('sub', num1=n1, num2=n2) }}">Subtraction</a>
+            <a href="{{ url_for('mul', num1=n1, num2=n2) }}">Multiplication</a>
+            <a href="{{ url_for('div', num1=n1, num2=n2) }}">Division</a>
+        </div>
     </div>
 </body>
 </html>
