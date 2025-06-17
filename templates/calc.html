@@ -37,7 +37,7 @@
 
         .buttons a {
             text-decoration: none;
-            background-color: #007bff;
+            background-color: #80a6cf;
             color: white;
             padding: 12px 20px;
             border-radius: 8px;
@@ -52,8 +52,8 @@
 </head>
 <body>
     <div class="container">
-        <h1>First Number: {{n1}}</h1>
-        <h1>Second Number: {{n2}}</h1>
+        <h1>1st Number: {{n1}}</h1>
+        <h1>2nd Number: {{n2}}</h1>
         <div class="buttons">
             <a href="{{ url_for('add', num1=n1, num2=n2) }}">Addition</a>
             <a href="{{ url_for('sub', num1=n1, num2=n2) }}">Subtraction</a>
